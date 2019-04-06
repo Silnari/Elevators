@@ -1,11 +1,11 @@
-#Elevator control system
+# Elevator control system
 
-###Overview
+### Overview
 This is a program which simulates work of elevators.
 It can handle up to 16 elevators. There is 10 floors in the building.
 You can add as many people on different floors as you want.
 
-##Using the code
+## Using the code
 
 To build program you need:
 * [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 8 or later.

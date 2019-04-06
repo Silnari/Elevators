@@ -18,6 +18,8 @@
  * To step all elevators by one, press 's'.
  * All active elevators will move by one floor.
  * People are picked up automatically.
+ *
+ * !!!List of destination does not show actual queue of destination, it shows something similar!!!
  */
 
 /**

@@ -216,6 +216,14 @@ public class Elevator {
         if (people.get(currentFloor) != null && !people.get(currentFloor).isEmpty()) {
             removePeople(currentFloor);
             destinations.remove(currentFloor);
+            //if this is not first floor in destination list but elevator stops here to let people out, check if there is someone to be picked
+            if(peopleWaiting.get(currentFloor) != null) {
+                for (Person person : peopleWaiting.get(currentFloor)) {
+                    addPerson(person);
+                    addDestination(person.getDesiredFloor(), Direction.STAY);
+                }
+                peopleWaiting.get(currentFloor).clear();
+            }
         }
 
         //prevents elevators from going crazy - if elevator reached destination but there is no one to be picked, remove this destination
@@ -240,6 +248,6 @@ public class Elevator {
      */
     @Override
     public String toString() {
-        return "ID: " + ID + ", current floor: " + currentFloor + ", destination: " + destinations + ", people inside: " + peopleInside;
+        return "ID: " + ID + ", current floor: " + currentFloor + ", destinations: " + destinations + ", people inside: " + peopleInside;
     }
 }

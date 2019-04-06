@@ -10,15 +10,15 @@ import java.util.*;
 public class Elevator {
     private int ID; //elevator's unique ID
     private Integer currentFloor; //current floor of the elevator
-    private int peopleInside; //how many people is inside of elevator
+    private int peopleInside; //how many people are in the elevator
     private Map<Integer, List<Person>> people; //map of people inside and their destinations
-    private LinkedList<Integer> destinations; //list of destinations of elevator
+    private LinkedList<Integer> destinations; //list of destinations of the elevator
     private Direction direction; //direction of the elevator
 
     /**
      * Elevator constructor initializes variables
      *
-     * @param ID unique number of elevator
+     * @param ID unique number of the elevator
      */
     public Elevator(int ID) {
         this.ID = ID;
